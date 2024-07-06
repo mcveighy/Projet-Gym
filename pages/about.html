@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body class="about">
+    <div class="wrapper">
+        <header>
+            <img class="logo" src="../images/logoCta.png" alt="">
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/equipment.html">Equipment</a></li>
+                <li><a href="../pages/timeTable.html">TimeLine</a></li>
+                <li><a href="../pages/contact.html">Contact</a></li>
+            </ul>
+            <img class="sigin" src="../images/sigin.png" alt="Sign In">
+        </nav>
+        <div class="wrapper-about">
+            <main class="about-main">
+                <h1> About Gym WebSite</h1>
+                <p>
+                    Welcome to GymWebSite, the ultimate destination for transforming your body and mind. 
+                    Our gym was founded with the mission to provide a welcoming and motivating environment 
+                    where everyone, regardless of fitness level, can achieve their health and wellness goals.
+                </p>
+                <h1>Our Mission</h1>
+                <p>
+                    We believe that fitness is for everyone. Our mission is to empower our members with the tools, 
+                    knowledge, and support they need for a healthier, more active life. We are committed to creating 
+                    an inclusive community that celebrates progress and perseverance.
+                </p>                    
+            </main>
+            <div class="img-right-about">
+                <div id="map"></div>
+            </div>                
+        </div>
+        <footer>
+            <div class="item-footer">
+                <div class="item">
+                    <h3>About Us</h3>
+                    <p>We are a gym dedicated to helping you achieve your fitness goals.</p>
+                </div>
+                <div class="item">
+                    <h3>Contact</h3>
+                    <p>Email: contact@gymwebsite.com</p>
+                    <p>Phone: (11) 1234-5678</p>                    
+                </div>
+                <div class="item">
+                    <h3>Social Media</h3>
+                    <ul>
+                        <li><a href="https://www.instagram.com">Instagram</a></li>
+                        <li><a href="https://www.facebook.com">Facebook</a></li>
+                        <li><a href="https://www.twitter.com">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([-25.363, 131.044], 15); // Coordenadas e zoom do mapa
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        L.marker([-25.363, 131.044]).addTo(map)
+            .bindPopup('Location of the gym.')
+            .openPopup();
+    </script>
+</body>
+</html>
